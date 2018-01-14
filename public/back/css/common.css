@@ -14,7 +14,7 @@
 html,body{
   height:100%;
 }
-a:hover{
+a:link, a:visited, a:hover, a:active{
   text-decoration: none;
 }
 .lt_aside{
@@ -22,6 +22,11 @@ a:hover{
   height:100%;
   background-color: #222d32;
   position: absolute;
+  left: 0;
+  transition: all 1s;
+}
+.lt_aside.now{
+  left: -180px;
 }
 .lt_aside .brand{
   width: 180px;
@@ -72,6 +77,10 @@ a:hover{
   height:100%;
   width:100%;
   padding-left: 180px;
+  transition: all 1s;
+}
+.lt_main.now{
+  padding-left: 0;
 }
 .lt_header{
   width:100%;
@@ -84,4 +93,8 @@ a:hover{
   color: #fff;
   padding: 0 20px;
   font-size: 16px;
+}
+.chart_left,.chart_right{
+  width:45%;
+  height: 400px;
 }
